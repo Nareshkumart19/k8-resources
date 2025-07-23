@@ -11,4 +11,5 @@ spec:
     image: nginx
   - name: alamalinux
     image: alamalinux
+    command: ["sleep", "1000"]
   
