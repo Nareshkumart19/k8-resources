@@ -1,0 +1,17 @@
+apiVersion: v1 
+kind: Pod
+metadata:
+  name: annotations
+  labels:
+    project: roboshop
+    component: mysql
+    tier: db
+    environment: dev
+  annotations: 
+    descriptions: "this is pod is createcd to demostraon pod annotations"
+    jenkins: "https://jenkins.com/build/job/roboshop-catalouge/3"
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    
