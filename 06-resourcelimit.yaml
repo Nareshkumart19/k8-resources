@@ -8,7 +8,7 @@ metadata:
 spec:
   containers: 
   - name: app
-    iamges: nginx
+    iamge: nginx
     resources:
       requests:
         memory: "64Mi"
