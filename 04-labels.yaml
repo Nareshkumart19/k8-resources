@@ -8,6 +8,6 @@ metadata:
     tier: backend
     environment: dev
 spec:
-  caontainers:
+  containers:
   - name: nginx
     image: nginx
