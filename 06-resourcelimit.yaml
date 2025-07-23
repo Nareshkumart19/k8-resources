@@ -9,7 +9,7 @@ spec:
   containers: 
   - name: app
     iamges: nginx
-    resorces:
+    resources:
       requests:
         memory: "64Mi"
         cpu: "250m"
