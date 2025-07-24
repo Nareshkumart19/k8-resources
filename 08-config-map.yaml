@@ -8,5 +8,5 @@ metadata:
     env: dev
 data:
   COURSE: "Devops with aws"
-  duration: "120hr"
-  trainer: "naresh"
+  duration: "100hr"
+  trainer: "siva kumar"
