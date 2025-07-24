@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Configmap
+metadata: 
+  name: pod-config
+  lables:
+    purpose: config
+    project: roboshop
+    env: dev
+data:
+  COURSE: "aws"
+  duration: "120hr"
+  trainer: "naresh"
