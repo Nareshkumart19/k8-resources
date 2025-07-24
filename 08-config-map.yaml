@@ -7,6 +7,6 @@ metadata:
     project: roboshop
     env: dev
 data:
-  COURSE: "aws"
+  COURSE: "Devops with aws"
   duration: "120hr"
   trainer: "naresh"
