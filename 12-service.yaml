@@ -1,0 +1,38 @@
+apiVesion: v1
+kind: service
+metadata:
+  name: nginx-naresh # service name
+  labels:
+    purpose: service-demo
+spec:
+  selector:
+    purpose: service-demo
+    project: roboshop
+    env: dev
+  port: 
+  - name: http
+    protocal:  tcp
+    port: 80 # service port
+    targetPort: 80 # container port
+
+---
+
+apiVesion: v1
+kind: pod
+metadata: 
+  name: nginx
+  labels:
+    purpose: service-demo
+    project: roboshop
+    env: dev
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+      - containerPort: 80
+        name: nginx
+
+
+
+  
