@@ -11,7 +11,7 @@ spec:
     env: dev
   port: 
   - name: http
-    protocal:  tcp
+    protocal:  TCP
     port: 80 # service port
     targetPort: 80 # container port
 
