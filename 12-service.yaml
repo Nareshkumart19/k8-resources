@@ -9,7 +9,7 @@ spec:
     purpose: service-demo
     project: roboshop
     env: dev
-  port: 
+  ports: 
   - name: http
     protocal:  TCP
     port: 80 # service port
