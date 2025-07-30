@@ -31,4 +31,4 @@ spec:
   volumes:
   - name: persistent-storage
     persistentVolumeClaim:
-      claimName:  ebs-dymanic-claim
+      claimName: ebs-dymanic-claim
