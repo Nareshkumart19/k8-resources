@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: nginx  
+  labels: 
+    # replica set labels
+    purpose: deployment-demo
+    project: roboshop
+    environment: dev
+    app: nginx
+spec:
+  replicas: 2
+  # these are the labels replica set use to crete pod replicas, this should match pod labels 
+  selector:
+    matchLabels:
+      purpose: deployment-demo
+      project: roboshop
+      environment: dev
+      app: nginx
+
+  # this pod defination    
+  template:
+    metadata:
+      labels:
+        purpose: deployment-demo
+        project: roboshop
+        environment: dev
+        app: nginx       
+    spec:
+      containers:
+      - name: nginx
+        #image: nginx:stable-perl
+        image: nginx
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-naresh # service name
+  labels:
+    purpose: deployment-demo
+spec:
+  selector:
+    purpose: deployment-demo
+    project: roboshop
+    environment: dev
+    app: nginx       
+  ports: 
+  - name: http
+    protocol:  TCP
+    port: 80 # service port
+    targetPort: 80 # container port
